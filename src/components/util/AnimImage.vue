@@ -3,7 +3,6 @@ import { ref, watchEffect, defineProps } from 'vue'
 
 const props = defineProps(['imageSrc', 'imageWidth', 'totalImages', 'x', 'y'])
 
-
 const currentImageIndex = ref(0)
 const imageStyle = ref('')
 const frameCount = ref(0) // フレームカウントの追加
@@ -19,7 +18,7 @@ const nextImage = () => {
   if (frameCount.value % 5 === 0) { // 8フレームごとに切り替え
     currentImageIndex.value = (currentImageIndex.value + 1) % props.totalImages
   }
-  
+
   requestAnimationFrame(nextImage) // 次の描画フレームで再度呼び出す
 }
 
@@ -36,13 +35,15 @@ requestAnimationFrame(nextImage) // 初回の呼び出し
   width: 135px;
   height: 142px;
   cursor: pointer;
-  position: relative; /* 子要素に対して位置を指定 */
+  position: relative;
+  /* 子要素に対して位置を指定 */
 }
 
 .image-container div {
   width: 100%;
   height: 100%;
-  position: absolute; /* 親要素に対して位置を指定 */
+  position: absolute;
+  /* 親要素に対して位置を指定 */
   background-repeat: no-repeat;
 }
 </style>
