@@ -15,18 +15,17 @@ import {update,addAcorn} from "./ItemArconController.ts"
 
 const doUpdate = () => {
   update()
-  addAcorn()
   requestAnimationFrame(doUpdate)
 }
 
 const doAddAcorn = () => {
   addAcorn()
-  setTimeout(doAddAcorn, Math.random() * 500 + 250)
+  setTimeout(doAddAcorn, Math.random() * 1000)
 }
 
 onMounted(() => {
   doUpdate()
-  setTimeout(doAddAcorn, Math.random() * 500 + 250);
+  setTimeout(doAddAcorn,  250);
 })
 </script>
 
@@ -39,6 +38,7 @@ onMounted(() => {
 }
 
 .game-image {
+  transform: scale(2);
   width: auto;
   height: auto;
 }

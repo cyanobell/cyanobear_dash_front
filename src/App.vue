@@ -11,7 +11,7 @@
 import GrassGround from './components/GrassGround/GrassGround.vue'
 import CyanoBear from './components/CyanoBear/CyanoBear.vue'
 import ItemArcon from './components/ItemArcon/ItemArcon.vue'
-import GameSystem from './components/GameComprnents/GameSystem.vue'
+import GameSystem from './components/GameManager/GameSystem.vue'
 </script>
 
 <style>
