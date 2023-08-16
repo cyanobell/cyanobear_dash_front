@@ -12,7 +12,7 @@ import { point } from '../GameManager/GameDataModel'
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
 }
 </style>

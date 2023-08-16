@@ -1,7 +1,7 @@
 <template>
     <div class="game-layer10 game-layer">
         <div @click="gameStart" class="text-container">
-            クリックでゲームスタート！
+             クリックかタップ でゲームスタート！
         </div>
     </div>
 </template>

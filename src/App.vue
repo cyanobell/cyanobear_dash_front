@@ -7,15 +7,17 @@
         <GameUI class="game-layer" />
         <GameSystem />
     </div>
+    <InstructionList />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import GrassGround from './components/GrassGround/GrassGround.vue'
 import CyanoBear from './components/CyanoBear/CyanoBear.vue'
 import ItemArcon from './components/ItemArcon/ItemArcon.vue'
 import EnemyCaterpiller from './components/EnemyCaterpiller/EnemyCaterpiller.vue'
 import GameSystem from './components/GameManager/GameSystem.vue'
 import GameUI from './components/GameUI/GameUI.vue'
+import InstructionList from './components/InstructionList/InstructionList.vue'
 </script>
 
 <style>

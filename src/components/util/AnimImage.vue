@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watchEffect, defineProps } from 'vue'
 
-const props = defineProps(['imageSrc', 'imageWidth', 'totalImages', 'x', 'y', 'animFlipFrame'])
+const props = defineProps(['imageSrc', 'imageWidth', 'imageHeight', 'totalImages', 'x', 'y', 'animFlipFrame'])
 
 const currentImageIndex = ref(0)
 const imageStyle = ref('')
@@ -23,15 +23,13 @@ const nextImage = () => {
 requestAnimationFrame(nextImage) // 初回の呼び出し
 </script>
 <template>
-    <div class="image-container">
+    <div class="image-container" :style="{ width: props.imageWidth + 'px', height: props.imageHeight + 'px'}">
         <div :style="imageStyle"></div>
     </div>
 </template>
 
 <style scoped>
 .image-container {
-    width: 135px;
-    height: 142px;
     cursor: pointer;
     position: relative;
     /* 子要素に対して位置を指定 */

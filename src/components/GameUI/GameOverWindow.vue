@@ -1,9 +1,9 @@
 <template>
     <div class="game-layer10 game-layer">
         <div @click="gameResetWithQuestion" class="text-container">
-            毛虫さんに触っちゃったから帰るわ…。<br><br>
+            毛虫さんに触っちゃった…。<br><br>
             {{ point }} 個のどんぐりを拾ったで！<br><br>
-            クリックでリセットするで！
+             クリックかタップ でリセットするで！
         </div>
     </div>
 </template>
@@ -12,7 +12,7 @@ import { gameReset } from '../GameManager/GameSystemController'
 import { point } from '../GameManager/GameDataModel'
 
 const gameResetWithQuestion = () => {
-    if (confirm('リセットしてもええんか？')) {
+    if (confirm('リセットしてもええか？')) {
         gameReset()
     }
 
