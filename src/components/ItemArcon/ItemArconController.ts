@@ -11,7 +11,6 @@ export const addAcorn = () => {
 
 export const update = () => {
     if (!arcons.value) {
-        console.log('arcons.value is null')
         return
     }
     arcons.value.forEach((arcon: Arcon, index) => {

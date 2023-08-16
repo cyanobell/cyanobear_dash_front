@@ -1,18 +1,18 @@
 <template>
     <div class="game-layer0">
-        <div v-for="arcon in arcons" :key="arcon.id" class="game-layer1"
-            :style="{ top: arcon.top + 'px', transform: `translateX(${arcon.left}px)` }">
+        <div v-for="caterpillar in caterpillars" :key="caterpillar.id" class="game-layer2"
+            :style="{ top: caterpillar.top + 'px', transform: `translateX(${caterpillar.left}px)` }">
             <img :src="imageSrc" class="game-image" />
         </div>
     </div>
 </template>
-
+  
 <script setup lang="ts">
-import imageSrc from '@/assets/arcon.png'
+import imageSrc from '@/assets/caterpillar.png'
 import { watch } from "vue"
 import { game_show_state, GameShowStatus } from '../GameManager/GameDataModel'
-import { arcons } from "./ItemArconModel"
-import { update, addAcorn } from "./ItemArconController"
+import { caterpillars } from "./EnemyCaterpillerModel"
+import { update, addCaterpillar, calcNextCaterpillarTime } from "./EnemyCaterpillerController"
 const doUpdate = () => {
     if (game_show_state.value === GameShowStatus.GAME_PLAYING) {
         update()
@@ -20,26 +20,26 @@ const doUpdate = () => {
     }
 }
 
-const doAddAcorn = () => {
+const doAddCaterpillar = () => {
     if (game_show_state.value === GameShowStatus.GAME_PLAYING) {
-        addAcorn()
-        setTimeout(doAddAcorn, Math.random() * 1000)
+        addCaterpillar()
+        setTimeout(doAddCaterpillar, calcNextCaterpillarTime())
     }
 }
 
 watch(game_show_state, (newVal) => {
     if (newVal === GameShowStatus.GAME_PLAYING) {
         doUpdate()
-        setTimeout(doAddAcorn, 250);
+        setTimeout(doAddCaterpillar, 250);
     }
     else {
-        arcons.value = []
+        caterpillars.value = []
     }
 })
 </script>
-
+  
 <style scoped>
-.game-layer1 {
+.game-layer2 {
     width: auto;
     height: auto;
     position: absolute;
@@ -47,8 +47,8 @@ watch(game_show_state, (newVal) => {
 }
 
 .game-image {
-    transform: scale(2);
     width: auto;
     height: auto;
 }
 </style>
+  

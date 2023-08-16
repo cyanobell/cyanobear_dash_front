@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-export class Arcon {
+export class Caterpillar {
     id: number;
     top: number;
     left: number;
@@ -10,4 +10,4 @@ export class Arcon {
         this.left = left;
     }
 }
-export const arcons = ref<Arcon[]>([])
+export const caterpillars = ref<Caterpillar[]>([])

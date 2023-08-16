@@ -1,8 +1,8 @@
 import { y } from './CyanoBearModel'
-const y_gravity :number= 0.8
-const y_ground :number= 300.0
-let y_speed :number= 0
-let on_ground :boolean= true
+const y_gravity: number = 0.8
+const y_ground: number = 300.0
+let y_speed: number = 0
+let on_ground: boolean = true
 
 export const update = () => {
     y_speed += y_gravity
