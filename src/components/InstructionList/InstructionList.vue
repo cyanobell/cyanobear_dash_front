@@ -5,7 +5,7 @@
                 <div :style="{ backgroundImage: 'url(' + CyanoBearImage + ')', width: CyanoBearimageWidth + 'px', height: CyanoBearimageHeight + 'px' }"></div>
             </td>
             <td>
-                ワイや！ クリックかタップ でジャンプするで！<br>
+                ウチや！ クリックかタップ でジャンプするで！<br>
                 画面のどこを クリックかタップ してもジャンプするで！
             </td>
         </tr>
@@ -13,7 +13,7 @@
             <td><img :src="ArconImage" :style="{ transform: 'scale(2)', padding: '10px'}" /></td>
             <td>
                 美味しいどんぐりや！今日はこれをいっぱい集めるで～。<br>
-                ワイが触れると集めることができるで！
+                ウチが触れると集めることができるで！
             </td>
         </tr>
         <tr>
@@ -21,7 +21,7 @@
             <td>
                 毛虫さんや！嫌やな～。<br>
                 奥に行くほど増えていくんや！<br>
-                ワイが触れるとゲームオーバーになっちゃうで！
+                ウチが触れるとゲームオーバーになっちゃうで！
             </td>
         </tr>
     </table>
