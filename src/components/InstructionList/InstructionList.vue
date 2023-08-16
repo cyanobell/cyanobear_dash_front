@@ -42,7 +42,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid #222;
-    margin: 10px auto;
+    margin: 10px;
 }
 td {
     padding: 10px;
