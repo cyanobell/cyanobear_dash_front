@@ -10,3 +10,4 @@ export enum GameShowStatus {
 
 export const game_show_state: Ref<GameShowStatus> = ref(GameShowStatus.GAME_BEFORE_START)
 export const gameCounter = ref(0)
+export const serverTotalArcon = ref(0)
