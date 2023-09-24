@@ -8,6 +8,7 @@
         <GameSystem />
     </div>
     <InstructionList />
+    <WebShow />
 </template>
 
 <script setup lang="ts">
@@ -18,6 +19,7 @@ import EnemyCaterpiller from './components/EnemyCaterpiller/EnemyCaterpiller.vue
 import GameSystem from './components/GameManager/GameSystem.vue'
 import GameUI from './components/GameUI/GameUI.vue'
 import InstructionList from './components/InstructionList/InstructionList.vue'
+import WebShow from './components/WebShow/WebShow.vue'
 </script>
 
 <style>

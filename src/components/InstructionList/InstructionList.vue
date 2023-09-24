@@ -27,9 +27,6 @@
     </table>
 </template>
 
-<td :style="{ width: CyanoBearimageWidth + 'px', height: CyanoBearimageHeight + 'px', textAlign: 'left', verticalAlign: 'top' }" >
-    <img :src="CyanoBearImage" class="game-image" :style="{ width: '100%', height: '100%', maxWidth: CyanoBearimageWidth + 'px', maxHeight: CyanoBearimageHeight + 'px', display: 'block' }" />
-</td>
 <script setup lang="ts">
 import CyanoBearImage from '@/assets/cyanobear.png'
 import {imageWidth as CyanoBearimageWidth, imageHeight as CyanoBearimageHeight} from '../CyanoBear/CyanoBearModel'
